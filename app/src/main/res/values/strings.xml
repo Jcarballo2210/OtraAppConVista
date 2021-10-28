@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OtraAppConVista</string>
+    <string name="et_Valor1_String">Inserte un primer valor</string>
+    <string name="et_Valor2_String">Inserte un segundo valor</string>
+    <string name="rb_Sumar_String">Sumar</string>
+    <string name="rb_Restar_String">Restar</string>
+    <string name="rb_Multiplicar_String">Multiplicar</string>
+    <string name="rb_Dividir_String">Dividir</string>
+    <string name="boton_String">Calcular</string>
+    <string name="tv_Resultado_String">Resultado</string>
+</resources>

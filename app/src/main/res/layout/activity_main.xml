@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_Valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="156dp"
+        android:ems="10"
+        android:hint="@string/et_Valor1_String"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_Valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="156dp"
+        android:ems="10"
+        android:hint="@string/et_Valor2_String"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Valor1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="184dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Valor2">
+
+        <RadioButton
+            android:id="@+id/rb_Sumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_Sumar_String"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Restar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_Restar_String"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Multiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_Multiplicar_String"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Dividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_Dividir_String"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="272dp"
+        android:onClick="Calcular"
+        android:text="@string/boton_String"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/tv_Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="214dp"
+        android:text="@string/tv_Resultado_String"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <CheckBox
+        android:id="@+id/cb_Sumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rb_Sumar_String"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/et_Valor2" />
+
+    <CheckBox
+        android:id="@+id/cb_Restar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rb_Restar_String"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/cb_Sumar" />
+
+    <CheckBox
+        android:id="@+id/cb_Multiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/rb_Multiplicar_String"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/cb_Restar" />
+
+    <CheckBox
+        android:id="@+id/cb_Dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/rb_Dividir_String"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/cb_Multiplicar" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="313dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_Dividir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
